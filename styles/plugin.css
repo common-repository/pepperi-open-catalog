@@ -1,0 +1,170 @@
+html,body { width: 100%;}
+
+.fl{float:left;}
+.fr{float:right;}
+
+.leftContainer{width:100%; padding: 0 .5rem 0 2rem; min-height: -webkit-calc(100vh - 210px);min-height: -moz-calc(100vh - 210px);min-height: calc(100vh - 210px);height: fit-content;}
+.rightContainer{width:100% ;padding: 0 2rem 0 .5rem;}	
+
+.spinner-wrapper{position: fixed;width: 100%;height: 100%;background: #fff;z-index: 99999;opacity: 0.7;top: 0;left: 0;display: none;}
+
+.pepHeader{background: #80808038;height: 70px; margin: 0;padding: 1rem 2rem; width: 100%;}
+.pep-header-container{ width: 100%; height: 2.5rem; padding: 1rem 2rem; margin: 0; }
+.leftContainer .pep-header-container, 
+.rightContainer .pep-header-container{height: 49px; width: 100%; margin: unset; padding: 0 !important; }
+
+.rightContainer .pep-list-container { width: 100%;}
+.page-header{ display: none;} /*need to remove and solve this issue*/
+
+#lbl-breadcrumbs{ width: 100%;}
+
+#one-line-totals { line-height: 3rem !important ;background: #fff;}
+#one-line-totals label { font-size: inherit;margin: unset;display: unset;font-weight: unset;}
+#two-line-totals {display: none; table-layout: fixed; width: auto; border: 0;}
+#two-line-totals td{padding:0;border: none;background: #fff;}
+
+pep-web-menu button{padding-top: 0; padding-bottom: 0; color: #333;}
+
+.is-0 .pepHeader pep-web-menu button.pep-button,
+.is-1 .pepHeader pep-web-menu button.pep-button,
+.is-2 .pepHeader pep-web-menu button.pep-button{max-width: 14rem; width: 14rem; justify-content: space-between !important;}
+pep-web-menu button:hover{color: #333;}
+
+button.mat-menu-item:focus{outline: none; outline-color: transparent;}
+pep-menu button{padding-top: 0; padding-bottom: 0; color: #333;}
+pep-menu button:hover{color: #333;}
+
+
+.pepCarousel{margin: 0 0 0 0; padding: 0px 15px; width: 100%; height: 300px; }
+/****************************SIDE BAR START***********************************/
+pep-side-bar { width: 100%;}
+pep-side-bar .side-layout { display:none;}
+/****************************SIDE BAR END***********************************/
+
+pep-web-form{ padding: 1rem;}
+
+mat-form-field input[type=date],
+mat-form-field input[type=email], 
+mat-form-field input[type=number], 
+mat-form-field input[type=password], 
+mat-form-field input[type=search], 
+mat-form-field input[type=tel], 
+mat-form-field input[type=text],
+mat-form-field input[type=url],
+mat-form-field input[type=text] {width:100%;border:none ;border-radius:0;padding:0; background: none;}
+
+mat-form-field input[type=date]:focus,
+mat-form-field input[type=email]:focus, 
+mat-form-field input[type=number]:focus, 
+mat-form-field input[type=password]:focus, 
+mat-form-field input[type=search]:focus, 
+mat-form-field input[type=tel]:focus, 
+mat-form-field input[type=text]:focus,
+mat-form-field input[type=url]:focus,
+mat-form-field input[type=text]:focus { outline: none;}
+
+/****************************List Pager Start****************************************/
+.pep-list-container .list-pager .pager-container{ position: static; bottom: auto;}
+
+/****************************List Pager End****************************************/
+
+/****************************Columns Divide START***********************************/
+.wp-block-columns {margin-bottom: 0 !important; margin-top: 0 !important;}
+.wp-block-columns .wp-block-column:first-child{ z-index: 100;}
+.wp-block-columns .wp-block-column:not(:first-child){ margin-left:0;z-index: 99;}
+/****************************Columns Divide END***********************************/
+
+/****************************SMALL SCREEN && SEARCH OPEN START***********************************/
+.is-4 pep-list-views {display: none;}
+.is-4 pep-list-sorting.pep-spacing-element { margin: 0 !important;}
+
+.is-3 #one-line-totals, .is-4 #one-line-totals { display: none;}
+.is-3 #two-line-totals, .is-4 #two-line-totals { display: block;}
+
+.is-3 #pep-filter-menu.showOnOpenCatalog,
+.is-4 #pep-filter-menu.showOnOpenCatalog{display: block !important; }
+
+.is-4 .search-is-open #pep-filter-menu,
+.is-4 .search-is-open pep-web-menu{ display:none !important; }
+.is-4 .search-is-open .pep-search-cont { width: 100%;}
+.is-4 .search-is-open .pep-search-cont .pep-search-container,
+.is-4 .search-is-open .pep-search-cont .pep-search-container .pep-search-input{ width: inherit;}
+.is-4 pep-web-search .pep-search-input input{ max-width: unset; }
+
+
+
+.wp-block-columns { float: left;width: 100%;display: grid;grid-gap: 0px;grid-template-columns: 20% 80%; }
+.wp-block-columns .wp-block-column { grid-column: 1; }
+.wp-block-column:not(:first-child){ grid-column: 2; }
+
+@media (max-width: 960px) {
+	.leftContainer{ display: none;}
+	.pepHeader {padding: 1rem;}
+	.rightContainer{width:100%;padding: 0 1rem;}
+	.pep-header-container { padding: 1rem;}
+	
+	.wp-block-columns { grid-template-columns: 0% 100% !important; display: grid !important; grid-gap: 0px !important;};
+	.wp-block-columns .wp-block-column:first-child { display:none !important; overflow: hidden !important;}
+}
+
+.is-3 .leftContainer,
+.is-4 .leftContainer {display: inherit !important;}
+
+.is-3 .wp-block-columns ,
+.is-4 .wp-block-columns { grid-template-columns: 0 100%; }
+.is-3 .wp-block-columns .wp-block-column:first-child,
+.is-4 .wp-block-columns .wp-block-column:first-child {overflow: hidden;}
+
+/*.is-3 .side-bar-container mat-sidenav-container,
+.is-4 .side-bar-container mat-sidenav-container { top: 0 !important;}*/
+.is-3 .side-bar-container .sidenav-container .sidenav,
+.is-4 .side-bar-container .sidenav-container .sidenav { padding-top: 0 !important; width: 75vw !important; padding-right: 0 !important;}
+.is-3 .side-bar-container .sidenav-container .sidenav-main { max-width: -webkit-calc(100% - 2rem) !important; max-width: -moz-calc(100% - 2rem) !important; max-width: calc(100% - 2rem) !important;}
+.is-4 .side-bar-container .sidenav-container .sidenav-main { max-width: -webkit-calc(100% - 1rem) !important; max-width: -moz-calc(100% - 1rem) !important; max-width: calc(100% - 1rem) !important;}
+.is-3 .sidenav-header.pep-border-bottom,
+.is-4 .sidenav-header.pep-border-bottom{ border-bottom: none !important;}
+/****************************SMALL SCREEN && SEARCH OPEN END***********************************/
+
+.mat-datetimepicker-calendar-table,
+.mat-datetimepicker-calendar-table td{ border: none; }
+.is-4 pep-date-filter>div>div { display: block !important;}
+
+#generalTab textarea { height: 110px; }
+table.form-table th { position: relative;padding-right: 24px; }
+#pagesTab select { width: 400px;}
+#AdvancedTab .form-table th[scope=row] { width: unset !important;}
+#AdvancedTab .btnAddNew {margin-bottom: 10px; margin-left: 8px;}
+#AdvancedTab h2 { line-height: 1.5rem; }
+#advancedRequestTable {border-collapse: collapse; width:100%;}
+#advancedRequestTable thead{background-color: #BDBDBD;line-height: 2rem; height: 2rem;}
+#advancedRequestTable thead th {width: unset; border: 1px solid black;text-align: center; padding: 0 .5rem; height: 2rem; padding: 0 !important;line-height: 2rem;}
+#pep_secret_key { width: 60% }
+#advancedRequestTable thead th:first-child{ width: 20%;}
+#advancedRequestTable thead th:last-child{ width: 9%; min-width: 90px;}
+
+#advancedRequestTable tbody tr td{ vertical-align: top; border: 1px solid black; padding: 10px; }
+#advancedRequestTable tbody tr td:last-child{ text-align: center;vertical-align: middle;}
+#advancedRequestTable tbody tr td i { font-size: 1.25rem;cursor: pointer;margin: 0 .5rem;}
+#advancedRequestTable tbody tr td i.fa-trash-alt{ color: Red;}
+#advancedRequestTable tbody td textarea,
+#advancedRequestTable tbody td input{min-width: -webkit-fill-available;}
+#advancedRequestTable tbody .disableRow textarea,
+#advancedRequestTable tbody .disableRow input{line-height: 1rem; background: none; border: none;box-shadow: none !important;}
+
+/* sideBarOpen - prevent screen scrool when sidebar is open on small devices */
+.sideBarOpen{ overflow-y: hidden !important;position: fixed;}
+
+/*****************  Avoid Style Overriding *********************************************/
+#main { display: block !important; padding-top: 0; padding-bottom:0;} // for twenty twenty-one theme
+
+body .pep-open-catalog { background-color: #fff !important; } // need to change to the plugin container ID
+
+.pepHeader.pep-open-catalog { max-width: 100% !important; font-size: 1rem; border: unst;}
+.wp-block-group__inner-container > *,
+.entry .entry-content > * { max-width: 100% !important;}
+pep-bread-crumbs li { margin: 0; line-height: 1.25rem;}
+.pep-open-catalog mat-checkbox input[type=checkbox] { appearance: none; display: none; }
+.pep-open-catalog pep-smart-filters .mat-checkbox-layout .mat-checkbox-background,
+.pep-open-catalog pep-smart-filters .mat-checkbox-layout .mat-checkbox-frame { margin-top: 0 !important; margin-bottom: 0 !important;}
+
+pep-rich-html-textarea h1{ line-height: initial;}
